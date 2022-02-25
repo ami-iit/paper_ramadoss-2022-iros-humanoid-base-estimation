@@ -12,14 +12,14 @@ Prashanth Ramadoss, Stefano Dafarra, Silvio Traversaro, Daniele Pucci
 </div>
 
 <div align="center">
-<a href="#installation"><b>Installation</b></a> |
+<a href="#installation-and-usage"><b>Installation and Usage</b></a> |
 <b>Paper</b> |
 <b>Video</b>
 </div>
 
-### Installation
+### Installation and Usage
 
-The description of  how to install the software and run the software to produce the plots of the paper is in the process of being updated.
+Please refer to the documentation in [docs/usage.md](./docs/usage.md).
 
 ### Citing this work
 
