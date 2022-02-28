@@ -4,9 +4,19 @@ function install_idyntree_bindings(varargin)
 % install iDynTree matlab bindings in the local directory
 % setup a default install path
 % or allow the user to specify path as
-% install_iDynTree('installPrefix', '<path-to-install>')
+% install_idyntree_bindings('installPrefix', '<path-to-install>')
+% One must ensure not to provide any path location with
+% a space character in it, eg. `/deps/hello world` is not recommended.
+
 p = inputParser;
-default_install_prefix = fullfile(pwd, '../deps/', 'idyntree-matlab');
+currentFolder = mfilename('fullpath');
+
+% since mfilenameoutput includes also the file name
+% we remove it from the full path
+lastSlashPos = find(currentFolder == '/', 1, 'last');
+currentFolder = currentFolder(1:lastSlashPos);
+
+default_install_prefix = fullfile(currentFolder, '../deps/', 'idyntree-matlab');
 p.addOptional('installPrefix', default_install_prefix);
 p.parse(varargin{:});
 
@@ -23,7 +33,7 @@ if ~ispc
     end
 end
 
-setup_script = fullfile(pwd, 'idyntree_bindings_setup.m');
+setup_script = fullfile(currentFolder, 'idyntree_bindings_setup.m');
 
 if exist(install_prefix)
     fprintf('Directory %s already present.\n', install_prefix);
@@ -34,7 +44,8 @@ end
 fprintf('Installing iDynTree Matlab bindings in %s\n', install_prefix);
 
 % The install url is created following
-mambaforge_url_prefix = 'https://github.com/conda-forge/miniforge/releases/latest/download/';
+% https://github.com/conda-forge/miniforge/releases/download/4.11.0-0/Mambaforge-MacOSX-x86_64.sh
+mambaforge_url_prefix = 'https://github.com/conda-forge/miniforge/releases/download/4.11.0-0/';
 if ispc
     mambaforge_installer_name = 'Mambaforge-Windows-x86_64.exe';
 elseif ismac
@@ -80,7 +91,7 @@ end
 
 % Install all the idyntree-matlab-bindings
 fprintf('Installing idyntree-matlab-bindings from robotology\n');
-system(sprintf('"%s" install -y -c conda-forge -c robotology idyntree-matlab-bindings', conda_full_path));
+system(sprintf('"%s" install -y -c conda-forge -c robotology idyntree-matlab-bindings=5.0.0 idyntree=5.0.1', conda_full_path));
 fprintf('Installation of idyntree-matlab-bindings completed\n');
 
 fprintf('Creating setup script in %s\n', setup_script);
