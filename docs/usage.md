@@ -8,7 +8,15 @@ The software has been tested with MATLAB R2021B on an Ubuntu 20.04 LTS OS. The r
 - MATLAB Curve Fitting Toolbox
 
 ### Easier way to install dependencies
-To be updated.
+Instead of manually installing the iDynTree MATLAB bindings, we provide a script that installs the bindings using a `Mambaforge` installer without modifying anything in the PC.
+
+One can install these bindings by launching the script `install_idyntree_bindings` on the MATLAB console while being in the `scripts` folder. This process installs the bindings in `paper_ramadoss-2022-ral-humanoid-base-estimation/deps/idyntree-matlab/mex` directory.
+
+Additionally, a configuration script `idyntree_bindings_setup.m` is created in the `scripts` folder. Running this script, adds the iDynTree bindings in the MATLAB path.
+
+Once the bindings are installed, it is possible to run the filters, as described in the section below.
+
+If one wants to uninstall the iDynTree bindings, they may simply delete the folder where it was installed.
 
 
 
