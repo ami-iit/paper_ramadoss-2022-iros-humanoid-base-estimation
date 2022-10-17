@@ -1,20 +1,26 @@
 <h1 align="center">
-An Experimental Comparison of Floating Base Estimators for Humanoid Robots with Flat Feet
+Comparison of EKF-Based Floating Base Estimators for Humanoid Robots with Flat Feet
 </h1>
 <div align="center">
-Prashanth Ramadoss, Stefano Dafarra, Silvio Traversaro, Daniele Pucci
+<i>
+P. Ramadoss, S. Traversaro and D. Pucci "Comparison of EKF-Based Floating Base Estimators for Humanoid Robots with Flat Feet" in IEEE 2022 International Conference on Intelligent Robots and Systems
+</i>
 </div>
 
-<p align="center"><img src="assets/cover.png" alt=""/></p>
+<p align="center">
+
+https://user-images.githubusercontent.com/6506093/196138116-7da131c4-055d-49b3-b8f8-3f4ef8099050.mp4
+
+
+</p>
 
 <div align="center">
-  IEEE Robotics and Automation Letters (RA-L)
+  2022 International Conference on Intelligent Robots and Systems
 </div>
 
 <div align="center">
 <a href="#installation-and-usage"><b>Installation and Usage</b></a> |
-<b>Paper</b> |
-<b>Video</b>
+<b>Paper</b>
 </div>
 
 ### Installation and Usage
