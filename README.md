@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/6506093/196138116-7da131c4-055d-49b3-b
 
 <div align="center">
 <a href="#installation-and-usage"><b>Installation and Usage</b></a> |
-<b>Paper</b>
+<a href="https://ieeexplore.ieee.org/document/9982275"><b>Paper</b></a> 
 </div>
 
 ### Installation and Usage
@@ -29,7 +29,19 @@ Please refer to the documentation in [docs/usage.md](./docs/usage.md).
 
 ### Citing this work
 
-To be updated.
+If you find the work useful, please cite our publication:
+
+```
+  @INPROCEEDINGS{9982275,
+  author={Ramadoss, Prashanth and Romualdi, Giulio and Dafarra, Stefano and Traversaro, Silvio and Pucci, Daniele},
+  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Comparison of EKF-Based Floating Base Estimators for Humanoid Robots with Flat Feet}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={6780-6787},
+  doi={10.1109/IROS47612.2022.9982275}}
+```
 
 ### Acknowledgements
 
